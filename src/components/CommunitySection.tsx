@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
-import { Discord, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import Discord from "@/components/icons/Discord";
 
 const CommunitySection = () => {
   return (

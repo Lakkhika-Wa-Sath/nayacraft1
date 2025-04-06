@@ -1,5 +1,6 @@
 
-import { Discord, Twitter, Facebook } from "lucide-react";
+import { Twitter, Facebook } from "lucide-react";
+import Discord from "@/components/icons/Discord";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
