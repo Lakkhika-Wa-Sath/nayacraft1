@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -25,6 +24,16 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				minecraft: {
+					green: "#5cb85c",
+					darkgreen: "#3e8e41",
+					brown: "#825432",
+					dirt: "#9b7653",
+					stone: "#7d7d7d",
+					bedrock: "#252525",
+					water: "#3d6aff",
+					lava: "#ff4500",
+				},
 				salon: {
 					cream: "#FEF7E6",
 					beige: "#E5DFD9",
@@ -72,6 +81,8 @@ export default {
 				}
 			},
 			fontFamily: {
+				'minecraft': ['"Press Start 2P"', 'cursive'],
+				'rubik': ['Rubik', 'sans-serif'],
 				'playfair': ['Playfair Display', 'serif'],
 				'montserrat': ['Montserrat', 'sans-serif']
 			},
@@ -100,12 +111,17 @@ export default {
 				fadeIn: {
 					'0%': { opacity: '0', transform: 'translateY(10px)' },
 					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				float: {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fadeIn 0.5s ease-out forwards'
+				'fade-in': 'fadeIn 0.5s ease-out forwards',
+				'float': 'float 3s ease-in-out infinite'
 			}
 		}
 	},

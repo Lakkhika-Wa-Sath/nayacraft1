@@ -1,49 +1,47 @@
 
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import { Discord, Twitter, Facebook } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   const navigation = [
     { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
+    { name: "Features", href: "#features" },
+    { name: "Servers", href: "#servers" },
     { name: "Gallery", href: "#gallery" },
-    { name: "Testimonials", href: "#testimonials" },
-    { name: "Contact", href: "#contact" },
+    { name: "Community", href: "#community" },
+    { name: "FAQ", href: "#faq" },
   ];
   
-  const services = [
-    { name: "Hair Styling", href: "#services" },
-    { name: "Facial Treatments", href: "#services" },
-    { name: "Nail Services", href: "#services" },
-    { name: "Massage Therapy", href: "#services" },
-    { name: "Makeup", href: "#services" },
+  const legal = [
+    { name: "Privacy Policy", href: "#" },
+    { name: "Terms of Service", href: "#" },
+    { name: "Rules", href: "#" },
   ];
   
   const social = [
-    { name: "Instagram", icon: <Instagram size={18} />, href: "#" },
-    { name: "Facebook", icon: <Facebook size={18} />, href: "#" },
+    { name: "Discord", icon: <Discord size={18} />, href: "#" },
     { name: "Twitter", icon: <Twitter size={18} />, href: "#" },
+    { name: "Facebook", icon: <Facebook size={18} />, href: "#" },
   ];
 
   return (
-    <footer className="bg-salon-charcoal text-white">
-      <div className="salon-container pt-16 pb-8">
+    <footer className="bg-gray-900 border-t border-gray-800">
+      <div className="max-w-7xl mx-auto pt-16 pb-8 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="col-span-1 md:col-span-1">
-            <h3 className="font-playfair text-2xl font-semibold mb-6">
-              Glow<span className="text-salon-gold">Salon</span>
+            <h3 className="text-2xl font-bold mb-6 text-white">
+              Naya<span className="text-green-400">Craft</span>
             </h3>
-            <p className="text-gray-300 mb-6">
-              Experience luxury hair and beauty services in a relaxing environment designed to enhance your natural beauty.
+            <p className="text-gray-400 mb-6">
+              An immersive Minecraft server featuring unique gameplay experiences, a friendly community, and regular events.
             </p>
             <div className="flex space-x-4">
               {social.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-300 hover:text-salon-gold transition-colors p-2 border border-gray-700 rounded-full"
+                  className="text-gray-400 hover:text-green-400 transition-colors p-2 border border-gray-700 rounded-full"
                 >
                   <span className="sr-only">{item.name}</span>
                   {item.icon}
@@ -53,13 +51,13 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-medium text-lg mb-4 text-salon-gold">Navigation</h3>
+            <h3 className="font-medium text-lg mb-4 text-green-400">Navigation</h3>
             <ul className="space-y-2">
               {navigation.map((item) => (
                 <li key={item.name}>
                   <a 
                     href={item.href} 
-                    className="text-gray-300 hover:text-salon-gold transition-colors"
+                    className="text-gray-400 hover:text-green-400 transition-colors"
                   >
                     {item.name}
                   </a>
@@ -69,13 +67,13 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-medium text-lg mb-4 text-salon-gold">Services</h3>
+            <h3 className="font-medium text-lg mb-4 text-green-400">Legal</h3>
             <ul className="space-y-2">
-              {services.map((item) => (
+              {legal.map((item) => (
                 <li key={item.name}>
                   <a 
                     href={item.href} 
-                    className="text-gray-300 hover:text-salon-gold transition-colors"
+                    className="text-gray-400 hover:text-green-400 transition-colors"
                   >
                     {item.name}
                   </a>
@@ -85,22 +83,21 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-medium text-lg mb-4 text-salon-gold">Contact</h3>
-            <address className="not-italic text-gray-300 space-y-2">
-              <p>123 Beauty St, New York, NY 10001</p>
-              <p>Phone: (123) 456-7890</p>
-              <p>Email: info@glowsalon.com</p>
-              <p className="pt-2">
-                <span className="block font-medium text-white">Hours:</span>
-                Mon-Sat: 9AM-7PM<br />
-                Sunday: 10AM-5PM
+            <h3 className="font-medium text-lg mb-4 text-green-400">Connect</h3>
+            <div className="text-gray-400">
+              <p className="mb-2">Server IP: play.nayacraft.com</p>
+              <p className="mb-2">Discord: discord.gg/nayacraft</p>
+              <p className="mb-2">Email: admin@nayacraft.com</p>
+              <p className="pt-4 text-sm text-gray-500">
+                Minecraft is a registered trademark of Mojang AB. 
+                NayaCraft is not affiliated with Mojang AB.
               </p>
-            </address>
+            </div>
           </div>
         </div>
         
-        <div className="mt-12 pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
-          <p>© {currentYear} GlowSalon. All rights reserved.</p>
+        <div className="mt-12 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
+          <p>© {currentYear} NayaCraft. All rights reserved.</p>
         </div>
       </div>
     </footer>

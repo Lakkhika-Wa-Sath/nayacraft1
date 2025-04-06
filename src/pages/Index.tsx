@@ -2,23 +2,23 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import AboutSection from "@/components/AboutSection";
-import ServicesSection from "@/components/ServicesSection";
+import FeaturesSection from "@/components/FeaturesSection";
+import ServersSection from "@/components/ServersSection";
 import GallerySection from "@/components/GallerySection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import ContactSection from "@/components/ContactSection";
+import CommunitySection from "@/components/CommunitySection";
+import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-900 text-white">
       <Navbar />
       <Hero />
-      <AboutSection />
-      <ServicesSection />
+      <FeaturesSection />
+      <ServersSection />
       <GallerySection />
-      <TestimonialsSection />
-      <ContactSection />
+      <CommunitySection />
+      <FAQSection />
       <Footer />
     </div>
   );

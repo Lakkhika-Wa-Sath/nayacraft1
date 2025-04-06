@@ -1,5 +1,6 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Rubik:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,33 +8,33 @@
 
 @layer base {
   :root {
-    --background: 40 33% 98%;
-    --foreground: 30 10% 15%;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 30 10% 15%;
+    --card-foreground: 240 10% 3.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 30 10% 15%;
+    --popover-foreground: 240 10% 3.9%;
 
-    --primary: 42 65% 52%;
+    --primary: 142 72% 29%; /* Minecraft green */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 30 20% 85%;
-    --secondary-foreground: 30 10% 15%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
 
-    --muted: 30 10% 96%;
-    --muted-foreground: 30 10% 40%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
 
-    --accent: 30 25% 90%;
-    --accent-foreground: 30 10% 15%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 30 15% 85%;
-    --input: 30 15% 85%;
-    --ring: 42 65% 52%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 142 72% 29%; /* Minecraft green */
 
     --radius: 0.5rem;
 
@@ -48,33 +49,33 @@
   }
 
   .dark {
-    --background: 30 10% 10%;
-    --foreground: 30 10% 90%;
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
 
-    --card: 30 10% 15%;
-    --card-foreground: 30 10% 90%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 30 10% 15%;
-    --popover-foreground: 30 10% 90%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 42 70% 60%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 142 72% 29%; /* Minecraft green */
+    --primary-foreground: 0 0% 100%; 
 
-    --secondary: 30 15% 25%;
-    --secondary-foreground: 30 10% 90%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 30 10% 20%;
-    --muted-foreground: 30 10% 70%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
 
-    --accent: 30 15% 25%;
-    --accent-foreground: 30 10% 90%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 30 15% 30%;
-    --input: 30 15% 30%;
-    --ring: 42 70% 50%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 142 72% 29%; /* Minecraft green */
     
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -93,11 +94,11 @@
   }
 
   body {
-    @apply bg-background text-foreground font-montserrat;
+    @apply bg-gray-900 text-foreground font-rubik;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-playfair;
+    @apply font-bold;
   }
 }
 
@@ -107,19 +108,15 @@
   }
   
   .section-title {
-    @apply font-playfair text-3xl md:text-4xl lg:text-5xl font-medium mb-6 text-salon-charcoal;
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white;
   }
   
   .section-subtitle {
-    @apply font-montserrat text-lg md:text-xl font-light mb-10 text-salon-brown/80 max-w-2xl mx-auto;
+    @apply text-lg md:text-xl font-light mb-10 text-gray-400 max-w-2xl mx-auto;
   }
   
-  .gold-underline {
-    @apply relative inline-block;
-  }
-  
-  .gold-underline::after {
-    @apply content-[''] absolute -bottom-2 left-0 h-0.5 w-1/2 bg-salon-gold;
+  .minecraft-button {
+    @apply inline-block bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 border-b-4 border-green-800 hover:border-green-700 active:border-t-4 active:border-b-0 active:border-green-800 rounded transition-all;
   }
 }
 
@@ -150,4 +147,32 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Minecraft-style pixel border */
+.pixel-border {
+  box-shadow: 
+    0 0 0 2px #000, 
+    inset 0 0 0 2px #000;
+}
+
+/* 8-bit style button */
+.btn-8bit {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  background: #5cb85c;
+  color: white;
+  box-shadow: 
+    inset -4px -4px 0px 0px #3e8e41,
+    inset 4px 4px 0px 0px #94d794;
+  font-family: 'Press Start 2P', cursive;
+  transition: all 0.1s;
+}
+
+.btn-8bit:active {
+  box-shadow: 
+    inset 4px 4px 0px 0px #3e8e41,
+    inset -4px -4px 0px 0px #94d794;
 }
